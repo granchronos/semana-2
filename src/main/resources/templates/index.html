@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script type="text/javascript" src="/js/scripts.js"></script>
+</head>
+<body>
+<h1 th:text="${welcomeMessage}">Welcome message</h1>
+<div>
+    <a th:href="@{/login}">Login</a>
+    <a th:href="@{/logout}">Logout</a>
+</div>
+</body>
+</html>
