@@ -17,20 +17,20 @@
     <form action="#" th:action="@{/edit}" th:object="${customer}" method="post">
       <input type="hidden" th:field="*{id}">
       <div class="form-group">
-        <label for="name">Nombre</label>
-        <input type="text" class="form-control" id="name" th:field="*{name}" placeholder="Nombre">
+        <label for="name" th:text="#{field.name}">Nombre</label>
+        <input type="text" class="form-control" id="name" th:field="*{name}" th:placeholder="#{field.name}">
       </div>
       <div class="form-group">
-        <label for="lastName">Apellido</label>
-        <input type="text" class="form-control" id="lastName" th:field="*{lastName}" placeholder="Apellido">
+        <label for="lastName" th:text="#{field.lastName}">Apellido</label>
+        <input type="text" class="form-control" id="lastName" th:field="*{lastName}" th:placeholder="#{field.lastName}">
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" th:field="*{email}" placeholder="Email">
+        <label for="email" th:text="#{field.email}">Email</label>
+        <input type="email" class="form-control" id="email" th:field="*{email}" th:placeholder="#{field.email}">
       </div>
       <div class="form-group">
-        <label for="birthday">BirthDay</label>
-        <input type="date" class="form-control" id="birthday" th:field="*{birthday}">
+        <label for="birthday" th:text="#{field.birthday}">BirthDay</label>
+        <input type="date" class="form-control" id="birthday" th:field="*{birthday}" th:placeholder="#{field.birthday}">
       </div>
       <button id="save-button" type="submit" class="btn btn-primary" th:text="#{button.edit}">Edit</button>
     </form>
