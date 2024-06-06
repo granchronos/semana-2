@@ -12,7 +12,8 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model, Locale locale) {
-        model.addAttribute("welcomeMessage", locale.getLanguage().equals("es") ? "¡Bienvenido a Spring Boot!" : "Welcome to Spring Boot!");
+        model.addAttribute("welcomeTittle", locale.getLanguage().equals("en") ? "Welcome to Customer Application" : "Bienvenido a la aplicaición de clientes");
+        model.addAttribute("welcomeMessage", locale.getLanguage().equals("en") ? "Manage your clients in a simple way.": "Gestiona a tus clientes de forma sencilla.");
         return "index";
     }
 
